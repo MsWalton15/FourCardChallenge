@@ -10,126 +10,126 @@ $darkblue: hsl(234, 12%, 34%);
 $grayishblue: hsl(229, 6%, 66%);
 $lightgray: hsl(0, 0%, 98%);
 
-* {
+/*********Layout*********/
+// Mobile: 375px
+@media screen and (min-width: 50px) {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  body {
     font-size: 15px;
-    font-family: 'Poppins', ;
+    font-family: "Poppins";
     padding: 5em 0 0;
-}
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
 
-/*********Layout*********/
-// Mobile: 375px
-@media screen and (min-width: 375px) {
     header {
-        text-align: center;
-        width: 25em;
-        margin: 0 auto;
+      text-align: center;
+      width: 25em;
+      margin: 0 auto;
 
-        h1 {
-            font-weight: 200;
-            color: $darkblue;
-        }
+      h1 {
+        font-weight: 200;
+        color: $darkblue;
+      }
 
-        p {
-            font-size: 18px;
-            margin: 6px;
-        }
+      p {
+        font-size: 18px;
+        margin: 6px;
+      }
     }
 
     p {
-        color: $grayishblue;
-        line-height: 1.75em;
+      color: $grayishblue;
+      line-height: 1.75em;
     }
 
     .boxes {
-        margin: 5em 0;
+      margin: 5em auto;
 
-        .box {
-            border-top: 4px solid;
-            border-radius: 5px;
-            width: 24em;
-            height: 17.5em;
-            box-shadow: 2px 5px 25px hsla(212, 76%, 54%, 0.2);
-            padding: 2.25em;
-            background-color: white;
-            margin: 2em auto;
-            position: relative;
+      .box {
+        border-top: 4px solid;
+        border-radius: 5px;
+        width: 24em;
+        height: 17.5em;
+        box-shadow: 2px 5px 25px hsla(212, 76%, 54%, 0.2);
+        padding: 2.25em;
+        background-color: white;
+        margin: 2em auto;
+        position: relative;
 
-            img {
-                position: absolute;
-                bottom: 2.25em;
-                right: 2.25em;
-            }
-
+        img {
+          position: absolute;
+          bottom: 2.25em;
+          right: 2.25em;
         }
+      }
     }
 
     #red {
-        border-color: $red;
+      border-color: $red;
     }
 
     #cyan {
-        border-color: $cyan;
+      border-color: $cyan;
     }
 
     #orange {
-        border-color: $orange;
+      border-color: $orange;
     }
 
     #blue {
-        border-color: $blue;
+      border-color: $blue;
     }
+    footer {
+      background: $darkblue;
+      padding: 1em;
+      font-size: 11px;
+      text-align: center;
 
-    .attribution {
-        font-size: 11px;
-        text-align: center;
-        background: $darkblue;
-        padding: 1em;
-    }
-
-    .attribution a {
+      .attribution a {
         color: white;
         text-decoration: none;
 
         &:hover {
-            text-decoration: underline;
+          text-decoration: underline;
         }
+      }
     }
+  }
 }
 
 // Desktop: 1440px
 @media screen and (min-width: 1440px) {
-    body {
-        background-color: $lightgray;
+  body {
+    background-color: $lightgray;
+  }
+
+  header {
+    width: 42em;
+  }
+
+  .boxes {
+    position: relative;
+    width: 1440px;
+
+    #cyan {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: 10em;
+      margin: auto;
     }
 
-    header {
-        width: 42em;
-        color: red;
+    #blue {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      right: 10em;
+      margin: auto;
     }
-
-    .boxes {
-        position: relative;
-
-        #cyan {
-            position: absolute;
-            top: 50%;
-            bottom: 50%;
-            left: 10em;
-            margin: auto;
-        }
-
-        #blue {
-            position: absolute;
-            top: 50%;
-            bottom: 50%;
-            right: 10em;
-            margin: auto;
-        }
-    }
+  }
 }
