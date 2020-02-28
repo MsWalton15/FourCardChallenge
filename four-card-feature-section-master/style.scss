@@ -1,0 +1,135 @@
+/*********Colors*********/
+
+//Primary
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+//Neutral
+$darkblue: hsl(234, 12%, 34%);
+$grayishblue: hsl(229, 6%, 66%);
+$lightgray: hsl(0, 0%, 98%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', ;
+    padding: 5em 0 0;
+}
+
+/*********Layout*********/
+// Mobile: 375px
+@media screen and (min-width: 375px) {
+    header {
+        text-align: center;
+        width: 25em;
+        margin: 0 auto;
+
+        h1 {
+            font-weight: 200;
+            color: $darkblue;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 6px;
+        }
+    }
+
+    p {
+        color: $grayishblue;
+        line-height: 1.75em;
+    }
+
+    .boxes {
+        margin: 5em 0;
+
+        .box {
+            border-top: 4px solid;
+            border-radius: 5px;
+            width: 24em;
+            height: 17.5em;
+            box-shadow: 2px 5px 25px hsla(212, 76%, 54%, 0.2);
+            padding: 2.25em;
+            background-color: white;
+            margin: 2em auto;
+            position: relative;
+
+            img {
+                position: absolute;
+                bottom: 2.25em;
+                right: 2.25em;
+            }
+
+        }
+    }
+
+    #red {
+        border-color: $red;
+    }
+
+    #cyan {
+        border-color: $cyan;
+    }
+
+    #orange {
+        border-color: $orange;
+    }
+
+    #blue {
+        border-color: $blue;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        background: $darkblue;
+        padding: 1em;
+    }
+
+    .attribution a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Desktop: 1440px
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: $lightgray;
+    }
+
+    header {
+        width: 42em;
+        color: red;
+    }
+
+    .boxes {
+        position: relative;
+
+        #cyan {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            left: 10em;
+            margin: auto;
+        }
+
+        #blue {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            right: 10em;
+            margin: auto;
+        }
+    }
+}
